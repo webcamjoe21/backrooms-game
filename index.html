@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Backrooms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer" class="game-container">
+        <div id="gameScreen" class="game-screen">
+            <div id="roomDisplay" class="room-display"></div>
+        </div>
+        
+        <div class="ui-panel">
+            <div class="stats">
+                <div class="stat-item">Level: <span id="levelDisplay">0</span></div>
+                <div class="stat-item">Sanity: <span id="sanityDisplay">100</span>%</div>
+                <div class="stat-item">Rooms Explored: <span id="roomsExploredDisplay">0</span></div>
+            </div>
+            
+            <div class="message-log" id="messageLog"></div>
+            
+            <div class="controls">
+                <button id="moveForwardBtn" class="control-btn">Move Forward (↑)</button>
+                <button id="moveBackwardBtn" class="control-btn">Move Backward (↓)</button>
+                <button id="moveLeftBtn" class="control-btn">Turn Left (←)</button>
+                <button id="moveRightBtn" class="control-btn">Turn Right (→)</button>
+                <button id="exploreBtn" class="control-btn primary">Explore Room</button>
+                <button id="restartBtn" class="control-btn danger" style="display:none;">Restart Game</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
