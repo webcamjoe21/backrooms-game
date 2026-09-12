@@ -143,14 +143,14 @@ function turnLeft() {
     if (gameState.gameOver || gameState.escaped) return;
     gameState.direction = (gameState.direction + 3) % 4;
     const directions = ["forward", "right", "backward", "left"];
-    addMessage(`You turn to face: ${directions[gameState.direction]}", "system");
+    addMessage(`You turn to face: ${directions[gameState.direction]}`, "system");
 }
 
 function turnRight() {
     if (gameState.gameOver || gameState.escaped) return;
     gameState.direction = (gameState.direction + 1) % 4;
     const directions = ["forward", "right", "backward", "left"];
-    addMessage(`You turn to face: ${directions[gameState.direction]}", "system");
+    addMessage(`You turn to face: ${directions[gameState.direction]}`, "system");
 }
 
 function explore() {
@@ -177,7 +177,7 @@ function escape() {
     gameState.escaped = true;
     gameState.gameOver = true;
     addMessage("🎉 SUCCESS! The device activates and you're transported back to reality!", "success");
-    addMessage(`You survived ${gameState.level} levels and explored ${gameState.roomsExplored} rooms.", "success");
+    addMessage(`You survived ${gameState.level} levels and explored ${gameState.roomsExplored} rooms.`, "success");
     addMessage("You escaped the Backrooms!", "success");
     
     document.getElementById('moveForwardBtn').style.display = 'none';
@@ -192,8 +192,8 @@ function escape() {
 
 function gameOver(message) {
     gameState.gameOver = true;
-    addMessage(`☠️ GAME OVER: ${message}", "danger");
-    addMessage(`Final Level: ${gameState.level} | Rooms Explored: ${gameState.roomsExplored} | Final Sanity: ${gameState.sanity}%", "danger");
+    addMessage(`☠️ GAME OVER: ${message}`, "danger");
+    addMessage(`Final Level: ${gameState.level} | Rooms Explored: ${gameState.roomsExplored} | Final Sanity: ${gameState.sanity}%`, "danger");
     
     document.getElementById('moveForwardBtn').style.display = 'none';
     document.getElementById('moveBackwardBtn').style.display = 'none';
